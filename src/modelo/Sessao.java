@@ -2,17 +2,27 @@ package modelo;
 
 public class Sessao {
 
+    private Integer codSessao;
     private Integer numeroSala;
     private Filme filme;
     private Integer quantIngressoDisponivel;
 
-    public Sessao(Integer numeroSala, Filme filme, Integer quantIngressoDisponivel) {
+    public Sessao(Integer codSessao, Integer numeroSala, Filme filme, Integer quantIngressoDisponivel) {
+        this.codSessao = codSessao;
         this.numeroSala = numeroSala;
         this.filme = filme;
         this.quantIngressoDisponivel = quantIngressoDisponivel;
     }
 
     public Sessao() {
+    }
+
+    public Integer getCodSessao() {
+        return codSessao;
+    }
+
+    public void setCodSessao(Integer codSessao) {
+        this.codSessao = codSessao;
     }
 
     public Integer getNumeroSala() {

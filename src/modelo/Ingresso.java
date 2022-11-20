@@ -2,6 +2,7 @@ package modelo;
 
 public class Ingresso {
 
+    private Integer codIngresso;
     private Sessao sessao;
     private Double valor;
     private String formaPagamento;
@@ -11,7 +12,8 @@ public class Ingresso {
     private Character fileira;
     private Integer numCadeira;
 
-    public Ingresso(Sessao sessao, Double valor, String formaPagamento, String nome, String cpf, String email, Character fileira, Integer numCadeira) {
+    public Ingresso(Integer codIngresso, Sessao sessao, Double valor, String formaPagamento, String nome, String cpf, String email, Character fileira, Integer numCadeira) {
+        this.codIngresso = codIngresso;
         this.sessao = sessao;
         this.valor = valor;
         this.formaPagamento = formaPagamento;
@@ -23,6 +25,14 @@ public class Ingresso {
     }
 
     public Ingresso() {
+    }
+
+    public Integer getCodIngresso() {
+        return codIngresso;
+    }
+
+    public void setCodIngresso(Integer codIngresso) {
+        this.codIngresso = codIngresso;
     }
 
     public Sessao getSessao() {
